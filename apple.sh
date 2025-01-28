@@ -128,10 +128,10 @@ source "${BASEDIR}"/scripts/function-${FFMPEG_KIT_BUILD_TYPE}.sh
 enable_default_architecture_variants
 
 # SELECT XCODE VERSION USED FOR BUILDING
-XCODE_FOR_FFMPEG_KIT=$(ls ~/.xcode.for.ffmpeg.kit.sh)
-if [[ -f ${XCODE_FOR_FFMPEG_KIT} ]]; then
-  source "${XCODE_FOR_FFMPEG_KIT}" 1>>"${BASEDIR}"/build.log 2>&1
-fi
+#XCODE_FOR_FFMPEG_KIT=$(ls ~/.xcode.for.ffmpeg.kit.sh)
+#if [[ -f ${XCODE_FOR_FFMPEG_KIT} ]]; then
+#  source "${XCODE_FOR_FFMPEG_KIT}" 1>>"${BASEDIR}"/build.log 2>&1
+#fi
 
 # DETECT SDK VERSIONS
 DETECTED_IOS_SDK_VERSION="$(xcrun --sdk iphoneos --show-sdk-version 2>>"${BASEDIR}"/build.log)"
