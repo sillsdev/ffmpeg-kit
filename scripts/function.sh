@@ -1851,7 +1851,7 @@ autoreconf_library() {
   echo -e "\nINFO: Running full autoreconf for $1\n" 1>>"${BASEDIR}"/build.log 2>&1
 
   # FORCE INSTALL
-  (autoreconf --force --install)
+  (autoreconf --force --install -I /opt/homebrew/Cellar/gettext/0.26/share/gettext/m4)
 
   local EXTRACT_RC=$?
   if [ ${EXTRACT_RC} -eq 0 ]; then
